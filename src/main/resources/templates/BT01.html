@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1. Nguyên tắc chung trong RESTful API:
+| Tiêu chí             | Quy tắc                                                                           |
+| -------------------- | --------------------------------------------------------------------------------- |
+| Resource             | Dùng danh từ số nhiều, tiếng Anh (vd: `books`, `authors`, `genres`)               |
+| Phương thức HTTP     | Sử dụng đúng chức năng: GET (lấy), POST (tạo), PUT/PATCH (cập nhật), DELETE (xóa) |
+| Tên endpoint         | Đơn giản, rõ ràng, không chứa động từ (dùng HTTP method thay thế)                 |
+| Phân cấp endpoint    | Theo quan hệ cha-con (nested), ví dụ `/authors/{id}/books`                        |
+| Định danh tài nguyên | Sử dụng `id` duy nhất, ví dụ: `/books/123`                                        |
+
+2. Endpoint quản lý Sách (/books):
+| Hành động           | HTTP   | Endpoint      | Mô tả                      |
+| ------------------- | ------ | ------------- | -------------------------- |
+| Lấy danh sách sách  | GET    | `/books`      | Lấy tất cả sách            |
+| Lấy chi tiết 1 sách | GET    | `/books/{id}` | Lấy thông tin sách theo id |
+| Tạo sách mới        | POST   | `/books`      | Tạo một cuốn sách mới      |
+| Cập nhật sách       | PUT    | `/books/{id}` | Cập nhật thông tin sách    |
+| Xóa sách            | DELETE | `/books/{id}` | Xóa sách theo id           |
+
+
+3. Endpoint quản lý Tác giả (/authors):
+| Hành động             | HTTP   | Endpoint        | Mô tả                         |
+| --------------------- | ------ | --------------- | ----------------------------- |
+| Lấy danh sách tác giả | GET    | `/authors`      | Lấy tất cả tác giả            |
+| Lấy chi tiết tác giả  | GET    | `/authors/{id}` | Lấy thông tin tác giả theo id |
+| Tạo tác giả mới       | POST   | `/authors`      | Tạo tác giả mới               |
+| Cập nhật tác giả      | PUT    | `/authors/{id}` | Cập nhật thông tin tác giả    |
+| Xóa tác giả           | DELETE | `/authors/{id}` | Xóa tác giả theo id           |
+
+4. Endpoint quản lý Thể loại (/genres):
+| Hành động              | HTTP   | Endpoint       | Mô tả                  |
+| ---------------------- | ------ | -------------- | ---------------------- |
+| Lấy danh sách thể loại | GET    | `/genres`      | Lấy tất cả thể loại    |
+| Lấy chi tiết thể loại  | GET    | `/genres/{id}` | Lấy thông tin thể loại |
+| Tạo thể loại mới       | POST   | `/genres`      | Tạo mới thể loại       |
+| Cập nhật thể loại      | PUT    | `/genres/{id}` | Cập nhật thể loại      |
+| Xóa thể loại           | DELETE | `/genres/{id}` | Xóa thể loại           |
+
+</body>
+</html>
