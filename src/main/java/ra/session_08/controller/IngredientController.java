@@ -1,10 +1,9 @@
-package ra.session_08.controlller;
+package ra.session_08.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import ra.session_08.dto.ApiResponse;
 import ra.session_08.dto.IngredientDTO;
 import ra.session_08.entity.Ingredient;

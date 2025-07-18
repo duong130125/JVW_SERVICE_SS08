@@ -1,4 +1,4 @@
-package ra.session_08.controlller;
+package ra.session_08.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

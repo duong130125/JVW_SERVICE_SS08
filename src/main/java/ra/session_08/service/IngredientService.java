@@ -1,13 +1,11 @@
 package ra.session_08.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 import ra.session_08.dto.IngredientDTO;
 import ra.session_08.entity.Ingredient;
 import ra.session_08.exception.NoResourceFoundException;
 import ra.session_08.repository.IngredientRepository;
 
-import java.io.IOException;
 import java.util.List;
 
 @Service
@@ -51,7 +49,7 @@ public class IngredientService {
 
     public void delete(Long id) {
         Ingredient existing = repository.findById(id)
-                .orElseThrow(() -> new NoResourceFoundException("Ingredient not found"));
+                .orElseThrow(() -> new NoResourceFoundException("Không tìm thấy nguyên liệu để xóa"));
         repository.delete(existing);
     }
 
